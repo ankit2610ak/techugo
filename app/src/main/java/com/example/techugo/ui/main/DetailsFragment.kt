@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.techugo.R
 
@@ -22,6 +23,13 @@ class DetailsFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.details_fragment, container, false)
         viewModel = ViewModelProviders.of(this).get(TabViewModel::class.java)
+
+        viewModel._livedata.observe(viewLifecycleOwner, Observer {
+        })
+
+        viewModel.getData()
+
+
         return view
 
     }
