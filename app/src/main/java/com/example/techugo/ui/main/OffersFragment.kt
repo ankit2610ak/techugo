@@ -31,6 +31,7 @@ class OffersFragment : Fragment() {
     var arrayList: ArrayList<String> = ArrayList()
     var cuponsArrayList: ArrayList<Cupons> = ArrayList()
     var mapButton: Button? = null
+    var callButton: Button? = null
     var lat: Float? = null
     var lon: Float? = null
 
@@ -43,6 +44,7 @@ class OffersFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recycler_view)
         offersRecyclerView = view.findViewById(R.id.offers_recycler_view)
         mapButton = view.findViewById(R.id.map_btn)
+        callButton = view.findViewById(R.id.call_btn)
         recyclerView?.layoutManager = LinearLayoutManager(
             this.requireContext()
             , LinearLayoutManager.HORIZONTAL, false
@@ -76,6 +78,10 @@ class OffersFragment : Fragment() {
             val intent = Intent(
                 Intent.ACTION_VIEW
             , Uri.parse("geo:$lat,$lon"))
+            startActivity(intent)
+        }
+        callButton?.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL)
             startActivity(intent)
         }
 
