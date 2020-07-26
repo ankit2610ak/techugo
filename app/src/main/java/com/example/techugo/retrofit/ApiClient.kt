@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
 
-    var BASE_URL: String = "http://13.232.62.239/talzo/dummy/test/"
+    private const val BASE_URL: String = "http://13.232.62.239/talzo/dummy/test/"
     val getClient: ApiInterface
         get() {
 
