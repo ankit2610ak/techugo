@@ -26,7 +26,7 @@
         android:drawableStart="@android:drawable/ic_dialog_map"
         android:padding="10dp"
         android:text="Map"
-
+        android:background="@drawable/btn_background"
         app:layout_constraintStart_toStartOf="@id/recycler_view"
         app:layout_constraintTop_toBottomOf="@id/recycler_view" />
 
@@ -37,6 +37,7 @@
         android:layout_marginTop="16dp"
         android:padding="10dp"
         android:text="Call"
+        android:background="@drawable/btn_background"
         android:drawableStart="@android:drawable/sym_action_call"
         app:layout_constraintEnd_toStartOf="@id/menu_btn"
         app:layout_constraintStart_toEndOf="@id/map_btn"
@@ -49,6 +50,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:drawableStart="@android:drawable/ic_menu_today"
+        android:background="@drawable/btn_background"
         android:padding="10dp"
         android:text="Menu"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Offers"
+        android:text="------------------  Offers  ------------------"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
